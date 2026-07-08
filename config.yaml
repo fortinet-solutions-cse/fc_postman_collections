@@ -1,0 +1,87 @@
+# =============================================================================
+# FortiCloud Unified SASE - Configuration file
+# Mirrors the variables from the Postman environment "FortiCloud for UnifiedSASE env"
+# =============================================================================
+# Usage:
+#   Fill in all values below, then run:
+#   python fortisase_provision.py --config config.yaml
+# =============================================================================
+
+# -----------------------------------------------------------------------------
+# FortiCloud API credentials
+# -----------------------------------------------------------------------------
+apiID: "1D7B9221-287B-4ABF-A5CD-A3B2CC036B6A"               # FortiCloud API user 
+apipassword: "32f5f2cf56180bf67cf0b627734054c1!1Aa"         # FortiCloud API password
+
+# -----------------------------------------------------------------------------
+# Organizational Unit (OU)
+# -----------------------------------------------------------------------------
+customer_OU_name: "Customer52"   # Name of the new OU to create for the customer
+
+# -----------------------------------------------------------------------------
+# FortiCare account details (step 04 - Create Account)
+# -----------------------------------------------------------------------------
+firstname: "Customer52"
+lastname: "Managed by MSSP"
+companyname: "Customer52"
+companyaddress: "10 rue de la ro"
+companycity: "Paris"
+companypostalcode: "75011"
+companystate: "idf"
+
+# ISO-2 country code (e.g. FR, US, DE, GB, JP...)
+# Automatically resolved to a country_id via the getcommondata API
+selected_country_name: "FR"
+
+# Local phone number only (no country prefix)
+# The prefix (+33, +1, etc.) is added automatically based on the country
+companyPhone: "632404040"
+
+# Company size ID - enter the numeric ID directly (e.g. 1000)
+# Bypasses the getcommondata API lookup entirely
+companysize: "15000"
+
+# -----------------------------------------------------------------------------
+# FortiFlex
+# -----------------------------------------------------------------------------
+# FortiFlex program serial number (usually starts with FLFCXXXXX)
+flexprogramserialnumber: "ELAVMS0000000824"
+
+# Name for the FortiFlex configuration to create
+flexconfigname: "Flex_Config_Customer52_SASE"
+
+# -- Required FortiSASE parameters (productTypeId: 205) ----------------------
+# Number of FortiSASE users (parameter id: 48)
+flexnumberofusers: "220"
+
+# Service package (parameter id: 49)
+# Valid values:
+#   "FSASESTD" = Standard
+#   "FSASEADV" = Advanced
+#   "FSASECOM" = Comprehensive
+flexservicepackage: "FSASEADV"
+
+# -- Optional parameters (leave empty or "0" to skip) ------------------------
+# Dedicated IP (parameter id: 51)
+#Number of dedicated IP (From 0 to 128) by range of 4 
+flexdedicatedip: "8"
+
+# Data transfer in GB (parameter id: 100)
+#Addon data transfer, from 0 to 2500000 divisible by 250
+flexdatatransfer: "0"
+
+# On-Ramp Cloud (parameter id: 101)
+#On Ramp public cloud, between 0 to 20. if active minimum of 2.
+flexonrampcloud: "0"
+
+# On-Ramp FTN (parameter id: 102)
+#On Ramp Fortinet DC, between 0 to 20. if active minimum of 2.
+flexonrampftn: "0"
+
+# Add Compute Cloud (parameter id: 104)
+#Additional Compute Cloud, between 0 to 16. If active minimum of 2. 
+flexaddcomputecloud: "0"
+
+# Add Compute FTN (parameter id: 105)
+#Additional Fortinet Compute , between 0 to 16. If active minimum of 2. 
+flexaddcomputeftn: "0"
