@@ -10,21 +10,21 @@
 # -----------------------------------------------------------------------------
 # FortiCloud API credentials
 # -----------------------------------------------------------------------------
-apiID: "1D7B9221-287B-4ABF-A5CD-A3B2CC036B6A"               # FortiCloud API user 
-apipassword: "32f5f2cf56180bf67cf0b627734054c1!1Aa"         # FortiCloud API password
+apiID: "xxxx-xxxx-xxxx-xxxx"               # FortiCloud API user 
+apipassword: "xxx-xxx-xxx-xxx"         # FortiCloud API password
 
 # -----------------------------------------------------------------------------
 # Organizational Unit (OU)
 # -----------------------------------------------------------------------------
-customer_OU_name: "Customer52"   # Name of the new OU to create for the customer
+customer_OU_name: "Customerxx"   # Name of the new OU to create for the customer
 
 # -----------------------------------------------------------------------------
 # FortiCare account details (step 04 - Create Account)
 # -----------------------------------------------------------------------------
-firstname: "Customer52"
+firstname: "Customerxx"
 lastname: "Managed by MSSP"
-companyname: "Customer52"
-companyaddress: "10 rue de la ro"
+companyname: "Customerxx"
+companyaddress: "xxstreetxx"
 companycity: "Paris"
 companypostalcode: "75011"
 companystate: "idf"
@@ -45,10 +45,10 @@ companysize: "15000"
 # FortiFlex
 # -----------------------------------------------------------------------------
 # FortiFlex program serial number (usually starts with FLFCXXXXX)
-flexprogramserialnumber: "ELAVMS0000000824"
+flexprogramserialnumber: "ELAVMS0000000xxx"
 
 # Name for the FortiFlex configuration to create
-flexconfigname: "Flex_Config_Customer52_SASE"
+flexconfigname: "Flex_Config_Customerxx_SASE"
 
 # -- Required FortiSASE parameters (productTypeId: 205) ----------------------
 # Number of FortiSASE users (parameter id: 48)
