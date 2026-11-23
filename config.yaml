@@ -1,0 +1,57 @@
+# FortiCloud Unified SASE  Provisioning Automation (forticloud_automationC.py)
+#
+# Placeholders only: copy your real values in from your existing config.yaml.
+# Do not commit this file with live credentials.
+
+# FortiCloud API credentials (also used by the IAM step: this is "api_user" /
+#    "api_password" from the Postman collection) 
+apiID: "YOUR-API-USER-ID"
+apipassword: "YOUR-API-PASSWORD"
+
+# Customer OU 
+customer_OU_name: "Customer88"
+
+# FortiCare account 
+firstname: "John"
+lastname: "Doe"
+companyname: "Customer88 SAS"
+companyaddress: "1 Example Street"
+companycity: "Paris"
+companypostalcode: "75001"
+companystate: "Ile-de-France"
+selected_country_name: "FR"        # country CODE, e.g. FR, US, DE
+companyPhone: "+33 1 23 45 67 89"
+companysize: "1-24"
+
+# FortiFlex 
+flexprogramserialnumber: "ELAVMS0000000000"
+flexconfigname: "Customer88-FortiSASE"
+flexnumberofusers: 50
+flexservicepackage: "FSASESTD"     # FSASESTD | FSASEADV | FSASECOM
+
+# Optional FortiFlex parameters (leave empty or 0 to skip)
+flexdedicatedip: ""
+flexdatatransfer: ""
+flexonrampcloud: ""
+flexonrampftn: ""
+flexaddcomputecloud: ""
+flexaddcomputeftn: ""
+
+# 
+# NEW in version   IAM profile + IAM user (step 07, OPTIONAL)
+#
+# Step 07 runs only if ALL five values below are filled in.
+# If any of them is empty, step 07 is skipped and steps 01-06 run as usual.
+# root_org_id and target_org_id are not needed here: the script finds/creates
+# them in steps 02a / 02b.
+# 
+permission_profile_name: ""          # e.g. "Comanagement-RO-SASE-Customer88"
+permission_profile_description: ""   # optional, defaults to "Comanagement read-only SASE profile"
+iam_user_name: ""                    # e.g. "customer88-ro"
+iam_email: ""                        # e.g. "jane.doe@example.com"
+iam_fullname: ""                     # e.g. "Jane Doe"
+iam_phone: ""                        # keep the quotes, e.g. "+33 6 12 34 56 78"
+
+# Optional: base URL of the IAM API used for accounts/list (Postman {{org_base_url}}).
+# Leave empty to use https://support.fortinet.com/ES/api/iam/v1
+org_base_url: ""

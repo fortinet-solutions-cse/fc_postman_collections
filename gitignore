@@ -1,0 +1,55 @@
+# ─────────────────────────────────────────────────────────────
+# Secrets: real config files hold FortiCloud API credentials
+# ─────────────────────────────────────────────────────────────
+config.yaml
+config.yml
+config.*.yaml
+config.*.yml
+*-config.yaml
+*.local.yaml
+.env
+.env.*
+*.pem
+*.key
+
+# Keep the placeholder template tracked
+!config.example.yaml
+
+# ─────────────────────────────────────────────────────────────
+# Runtime output: logs / saved API responses may contain tokens,
+# account IDs, serial numbers
+# ─────────────────────────────────────────────────────────────
+*.log
+logs/
+output/
+responses/
+*.har
+
+# Postman exports can embed api_user / api_password
+*.postman_collection.json
+*.postman_environment.json
+
+# ─────────────────────────────────────────────────────────────
+# Python
+# ─────────────────────────────────────────────────────────────
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+env/
+build/
+dist/
+*.egg-info/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# ─────────────────────────────────────────────────────────────
+# Editors / OS (Windows)
+# ─────────────────────────────────────────────────────────────
+.vscode/
+.idea/
+Thumbs.db
+desktop.ini
+$RECYCLE.BIN/
+.DS_Store
